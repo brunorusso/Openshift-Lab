@@ -111,7 +111,7 @@
         </div>
         <div class="ls-box-body">
           <div class="col-xs-6">
-            <strong>26</strong>
+            <strong><?php echo date('j');?></strong>
             <small>dia</small>
           </div>
           <div class="col-xs-6">
