@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="ls-theme-dark-blue">
   <head>
-    <title>Laboratório de Openshift com Locaweb STYLE - 21/08/2017</title>
+    <title>Laboratório de Openshift com Locaweb STYLE - 26/09/2017</title>
 
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
