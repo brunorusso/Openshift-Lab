@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="ls-theme-dark-blue">
+<html class="ls-theme-dark-green">
   <head>
     <title>Laboratório de Openshift com Locaweb STYLE - 26/09/2017</title>
 
@@ -21,7 +21,7 @@
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
         <img src="/locawebstyle/assets/images/locastyle/avatar-example.jpg" alt="" />
-        <span class="ls-name">Karol Józef Wojtyła</span>
+        <span class="ls-name">Usuário</span>
         (johnkennedy)
       </a>
 
