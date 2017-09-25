@@ -127,7 +127,7 @@
             <small>hora</small>
           </div>
           <div class="col-xs-6">
-            <strong>: <?php echo date('i');?></strong>
+            <strong><?php  date_default_timezone_set('America/Sao_Paulo'); echo ":" . date('i');?></strong>
             <small>minuto</small>
           </div>
         </div>
