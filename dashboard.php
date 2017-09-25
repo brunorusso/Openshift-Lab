@@ -123,11 +123,11 @@
         </div>
         <div class="ls-box-body">
           <div class="col-xs-6">
-            <strong><?php echo date('g');?></strong>
+            <strong><?php date_default_timezone_set('America/Sao_Paulo'); echo date('g');?></strong>
             <small>hora</small>
           </div>
           <div class="col-xs-6">
-            <strong><?php  date_default_timezone_set('America/Sao_Paulo'); echo ":" . date('i');?></strong>
+            <strong><?php  date_default_timezone_set('America/Sao_Paulo'); echo date('i');?></strong>
             <small>minuto</small>
           </div>
         </div>
