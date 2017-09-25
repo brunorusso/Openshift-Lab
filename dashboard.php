@@ -21,7 +21,7 @@
     <div data-ls-module="dropdown" class="ls-dropdown ls-user-account">
       <a href="#" class="ls-ico-user">
         <img src="/locawebstyle/assets/images/locastyle/avatar-example.jpg" alt="" />
-        <span class="ls-name">Karol Józef Wojtyła</span>
+        <span class="ls-name">Usuário</span>
         (johnkennedy)
       </a>
 
@@ -100,28 +100,41 @@
       </div>
     </div>
     <div class="col-sm-6 col-md-3">
-      <div class="ls-box ls-box-centered">
-        <strong>TEXTO</strong>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-3">
       <div class="ls-box">
         <div class="ls-box-head">
           <h6 class="ls-title-4">DATA</h6>
         </div>
         <div class="ls-box-body">
           <div class="col-xs-6">
-            <strong>26</strong>
+            <strong><?php echo date('j');?></strong>
             <small>dia</small>
           </div>
           <div class="col-xs-6">
-            <strong>10</strong>
+            <strong><?php echo date('m');?></strong>
             <small>mês</small>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <div class="col-sm-6 col-md-3">
+      <div class="ls-box">
+        <div class="ls-box-head">
+          <h6 class="ls-title-4">HORA</h6>
+        </div>
+        <div class="ls-box-body">
+          <div class="col-xs-6">
+            <strong><?php date_default_timezone_set('America/Sao_Paulo'); echo date('g');?></strong>
+            <small>hora</small>
+          </div>
+          <div class="col-xs-6">
+            <strong><?php  date_default_timezone_set('America/Sao_Paulo'); echo date('i');?></strong>
+            <small>minuto</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ </div>
 </div>
         
       </div>
