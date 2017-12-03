@@ -67,8 +67,6 @@
   		<h5 class="ls-title-3">Laboratório de Openshift</h5>
   		<p>Este é um exemplo simples de aplicação sendo executada em Openshift.</p>
         <p>O menu ao lado, possui outros exemplos com páginas dinâmicas.</p>
-        <p>A imagem abaixo está sendo acessada diretamente do <a href="object-storage.locawebcorp.com.br">Object Storage</a>.<br>
-          <br><img src="https://produtos-corp.lss.locawebcorp.com.br/img/LocawebCorp.png" ></p>
 
         </div>
         
