@@ -95,7 +95,7 @@
 	}
 	$conn->close();
 
-	$conn = new mysqli($dbhost, $dbusername, $dbpassword, dbname);
+	$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
 	$sql = "INSERT INTO visitas (versao) VALUES ('1')";
 
 	if ($conn->query($sql) === TRUE) {
