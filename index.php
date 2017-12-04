@@ -70,17 +70,27 @@
 <?php
 	include 'conecta.php';
 
-// Create connection
-$conn = new mysqli($dbhost, $dbusername, $dbpassword);
+	// Create connection
+	$conn = new mysqli($dbhost, $dbusername, $dbpassword);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+	// Check connection
+	if ($conn->connect_error) {
+    		die("Connection failed: " . $conn->connect_error);
+	} 
+	echo "Connected successfully";
 
-//	$mysqlCon = mysqli_connect($dbhost, $dbusername, $dbpassword, "", $dbport) or die("Error: " . mysqli_error($mysqlCon));
-//	mysqli_select_db($mysqlCon, $db_name) or die("Error: " . mysqli_error($mysqlCon));
+	$sql = "SELECT count(id), data FROM visitas order by data desc";
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0) {
+    	// output data of each row
+    	while($row = $result->fetch_assoc()) {
+        	echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+    	}
+	} else {
+    		echo "0 results";
+	}
+	$conn->close();
 
 ?>
         </div>
