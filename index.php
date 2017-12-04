@@ -89,22 +89,19 @@
 	} else {
 		$sql = "CREATE TABLE visitas (
 			id INT(6) AUTO_INCREMENT PRIMARY KEY, 
-			data TIMESTAMP
+			data TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+			versao VARCHAR(5) NOT NULL
 		)";
 	}
-	
 
-	$dia = getdate();
-	echo $dia;
-	$sql = "INSERT INTO visitas (data) VALUES ($dia)";
+	$conn = new mysqli($dbhost, $dbusername, $dbpassword);
+	$sql = "INSERT INTO visitas (versao) VALUES ('1')";
 
 	if ($conn->query($sql) === TRUE) {
     		echo "New record created successfully";
 	} else {
  	   	echo "Error: " . $sql . "<br>" . $conn->error;
 	}
-
-
 
 
 	$conn->close();
