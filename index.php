@@ -69,12 +69,10 @@
         <p>O menu ao lado, possui outros exemplos com páginas dinâmicas.</p>
 <?php
 	include 'conecta.php';
-	$link = mysql_connect('$DB_HOST', 'DB_USER', '$DB_PASSWORD');
-	if (!$link) {
-    		die('Não foi possível conectar: ' . mysql_error());
-	}
-	echo 'Conexão bem sucedida';
-	mysql_close($link);
+
+$mysqlCon = mysqli_connect($dbhost, $dbusername, $dbpassword, "", $dbport) or die("Error: " . mysqli_error($mysqlCon));
+mysqli_select_db($mysqlCon, $db_name) or die("Error: " . mysqli_error($mysqlCon));
+
 ?>
         </div>
         
