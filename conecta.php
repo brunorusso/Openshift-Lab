@@ -13,4 +13,10 @@ $dbusername = constant("DB_USER"); // MySQL username
 $dbpassword = constant("DB_PASSWORD"); // MySQL password 
 $db_name = constant("DB_DATABASE"); // Database name 
 
+$a = "dsdsds";
+
+
+
+echo "$dbhost - $dbport -  $dbusername -  $dbpassword - $db_name"
+
 ?>

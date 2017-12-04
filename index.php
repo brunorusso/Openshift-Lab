@@ -71,7 +71,7 @@
 	include 'conecta.php';
 
 	echo "$dbhost, $dbusername, $dbpassword, $dbport";
-	
+
 
 	$mysqlCon = mysqli_connect($dbhost, $dbusername, $dbpassword, "", $dbport) or die("Error: " . mysqli_error($mysqlCon));
 	mysqli_select_db($mysqlCon, $db_name) or die("Error: " . mysqli_error($mysqlCon));
