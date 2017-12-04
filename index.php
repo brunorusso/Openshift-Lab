@@ -79,17 +79,34 @@
 	} 
 	echo "Connected successfully";
 
-	$sql = "SELECT count(id), data FROM visitas order by data desc";
+	$sql = "SELECT count(id) as total, data FROM visitas order by data desc";
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
     	// output data of each row
     	while($row = $result->fetch_assoc()) {
-        	echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+        	echo "id: " . $row["total"]. " - Data: " . $row["data"]. "<br>";
     	}
 	} else {
-    		echo "0 results";
+		$sql = "CREATE TABLE visitas (
+			id INT(6) AUTO_INCREMENT PRIMARY KEY, 
+			data TIMESTAMP
+		)";
 	}
+	
+
+	$data = date();
+	$sql = "INSERT INTO vistas (data) VALUES ('$data')";
+
+	if ($conn->query($sql) === TRUE) {
+    		echo "New record created successfully";
+	} else {
+ 	   	echo "Error: " . $sql . "<br>" . $conn->error;
+	}
+
+
+
+
 	$conn->close();
 
 ?>
