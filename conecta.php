@@ -1,9 +1,9 @@
 <?php
-$mysqli = mysqli_connect(
-    getenv('OPENSHIFT_MYSQL_DB_HOST'), 
-    getenv('OPENSHIFT_MYSQL_DB_USERNAME'), 
-    getenv('OPENSHIFT_MYSQL_DB_HOST'), 
-    getenv('OPENSHIFT_MYSQL_DB_PASSWORD'),
-    getenv('OPENSHIFT_MYSQL_DB_PORT')
-);
+#Define variaveis para conexao ao banco de dados
+
+$DB_HOST = $_SERVER['MYSQL_PORT_3306_TCP_ADDR'];
+$DB_DATABASE = $_SERVER['MYSQL_DATABASE'];
+$DB_USER = $_SERVER['MYSQL_USER'];
+$DB_PASSWORD = $_SERVER['MYSQL_PASSWORD'];
+
 ?>

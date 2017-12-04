@@ -67,7 +67,15 @@
   		<h5 class="ls-title-3">Laboratório de Openshift</h5>
   		<p>Este é um exemplo simples de aplicação sendo executada em Openshift.</p>
         <p>O menu ao lado, possui outros exemplos com páginas dinâmicas.</p>
-
+<?php
+	include 'conecta.php';
+	$link = mysql_connect('$DB_HOST', 'DB_USER', '$DB_PASSWORD');
+	if (!$link) {
+    		die('Não foi possível conectar: ' . mysql_error());
+	}
+	echo 'Conexão bem sucedida';
+	mysql_close($link);
+?>
         </div>
         
       </div>
