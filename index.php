@@ -75,35 +75,33 @@
 
 	// Check connection
 	if ($conn->connect_error) {
-    		die("Connection failed: " . $conn->connect_error);
-	} 
+    		die("Erro na conexao com o Banco de Dados: " . $conn->connect_error);
+	} else { 
 
-	$sql = "SELECT count(id) as total, data FROM visitas order by data desc";
-	$result = $conn->query($sql);
+		$sql = "SELECT count(id) as total, data FROM visitas order by data desc";
+		$result = $conn->query($sql);
 
-	if ($result->num_rows > 0) {
-    	// output data of each row
-    	while($row = $result->fetch_assoc()) {
-        	echo "id: " . $row["total"]. " - Data: " . $row["data"]. "<br>";
-    	}
-	} else {
-		$sql = "CREATE TABLE visitas (
-			id INT(6) AUTO_INCREMENT PRIMARY KEY, 
-			data TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-			versao VARCHAR(5) NOT NULL
-		)";
+		if ($result->num_rows > 0) {
+    		// output data of each row
+	    	while($row = $result->fetch_assoc()) {
+        		echo "id: " . $row["total"]. " - Data: " . $row["data"]. "<br>";
+	    	}
+		} else {
+			$sql = "CREATE TABLE visitas (
+				id INT(6) AUTO_INCREMENT PRIMARY KEY, 
+				data TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+				versao VARCHAR(5) NOT NULL
+			)";
+		}
+		$conn->close();
+		$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
+		$sql = "INSERT INTO visitas (versao) VALUES ('1')";
+		if ($conn->query($sql) === TRUE) {
+	    		echo "New record created successfully";
+		} else {
+ 	   		echo "Error: " . $sql . "<br>" . $conn->error;
+		}
 	}
-	$conn->close();
-
-	$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
-	$sql = "INSERT INTO visitas (versao) VALUES ('1')";
-
-	if ($conn->query($sql) === TRUE) {
-    		echo "New record created successfully";
-	} else {
- 	   	echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-
 
 	$conn->close();
 
