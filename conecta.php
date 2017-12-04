@@ -10,7 +10,7 @@ define('DB_DATABASE', getenv('OPENSHIFT_GEAR_NAME'));
 $dbhost = constant("DB_HOST"); // Host name 
 $dbport = constant("DB_PORT"); // Host port
 $dbusername = constant("DB_USER"); // MySQL username 
-$dbpassword = constant("DB_PASS"); // MySQL password 
-$db_name = constant("DB_NAME"); // Database name 
+$dbpassword = constant("DB_PASSWORD"); // MySQL password 
+$db_name = constant("DB_DATABASE"); // Database name 
 
 ?>
