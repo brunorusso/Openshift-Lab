@@ -76,8 +76,9 @@
 	// Check connection
 	if ($conn->connect_error) {
     		die("Erro na conexao com o Banco de Dados: " . $conn->connect_error);
+		$conn->close();
 	} else { 
-
+		$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
 		$sql = "SELECT count(id) as total, data FROM visitas order by data desc";
 		$result = $conn->query($sql);
 
