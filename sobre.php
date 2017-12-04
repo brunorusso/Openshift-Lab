@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="ls-theme-royal-blue">
+<html class="ls-theme-orange">
   <head>
     <title>Laboratório de Openshift com Locaweb STYLE</title>
 
