@@ -100,12 +100,11 @@
 			} else {
  	   			echo "Erro ao criar o banco de dados: " . $sql . "<br>" . $conn->error;
 			}
+			$conn->close();
 		}
-		$conn->close();
 		$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
 		$sql = "INSERT INTO visitas (versao) VALUES ('1')";
 		if ($conn->query($sql) === TRUE) {
-	    		echo "New record created successfully";
 		} else {
  	   		echo "Error: " . $sql . "<br>" . $conn->error;
 		}
