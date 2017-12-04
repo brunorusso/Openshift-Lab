@@ -86,13 +86,20 @@
     		// output data of each row
 	    	while($row = $result->fetch_assoc()) {
         		echo "id: " . $row["total"]. " - Data: " . $row["data"]. "<br>";
+			$conn->close();
 	    	}
 		} else {
+			$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
 			$sql = "CREATE TABLE visitas (
 				id INT(6) AUTO_INCREMENT PRIMARY KEY, 
 				data TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 				versao VARCHAR(5) NOT NULL
 			)";
+			if ($conn->query($sql) === TRUE) {
+	    			echo "Banco de dados criado com sucesso";
+			} else {
+ 	   			echo "Erro ao criar o banco de dados: " . $sql . "<br>" . $conn->error;
+			}
 		}
 		$conn->close();
 		$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
