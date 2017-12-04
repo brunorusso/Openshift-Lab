@@ -77,7 +77,6 @@
 	if ($conn->connect_error) {
     		die("Connection failed: " . $conn->connect_error);
 	} 
-	echo "Connected successfully";
 
 	$sql = "SELECT count(id) as total, data FROM visitas order by data desc";
 	$result = $conn->query($sql);
@@ -95,8 +94,8 @@
 	}
 	
 
-	$data = date();
-	$sql = "INSERT INTO vistas (data) VALUES ('$data')";
+	$dia = getdate();
+	$sql = "INSERT INTO vistas (data) VALUES ('$dia')";
 
 	if ($conn->query($sql) === TRUE) {
     		echo "New record created successfully";
