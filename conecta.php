@@ -10,6 +10,6 @@ $dbhost = constant("DB_HOST"); // Host name
 $dbport = "3306"; // Host port
 $dbusername = constant("DB_USER"); // MySQL username 
 $dbpassword = constant("DB_PASSWORD"); // MySQL password 
-$db_name = constant("DB_DATABASE"); // Database name 
+$dbname = constant("DB_DATABASE"); // Database name 
 
 ?>
