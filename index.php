@@ -85,7 +85,7 @@
 		if ($result->num_rows > 0) {
     		// output data of each row
 	    	while($row = $result->fetch_assoc()) {
-        		echo "Voc� é o visitante número: " . $row["id"];
+        		echo "Voc&eacute; é o visitante número<b>: " . $row["id"] . "</b>";
 			$conn->close();
 	    	}
 		} else {
