@@ -79,13 +79,13 @@
 		$conn->close();
 	} else { 
 		$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
-		$sql = "SELECT count(id) FROM visitas";
+		$sql = "SELECT count(id) as id FROM visitas";
 		$result = $conn->query($sql);
 
 		if ($result->num_rows > 0) {
     		// output data of each row
 	    	while($row = $result->fetch_assoc()) {
-        		echo "id: " . $row["total"];
+        		echo "id: " . $row["id"];
 			$conn->close();
 	    	}
 		} else {
