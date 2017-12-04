@@ -67,52 +67,7 @@
   		<h5 class="ls-title-3">Laboratório de Openshift</h5>
   		<p>Este é um exemplo simples de aplicação sendo executada em Openshift.</p>
         <p>O menu ao lado, possui outros exemplos com páginas dinâmicas.</p>
-<?php
-	include 'conecta.php';
 
-	// Create connection
-	$conn = new mysqli($dbhost, $dbusername, $dbpassword);
-
-	// Check connection
-	if ($conn->connect_error) {
-    		die("Erro na conexao com o Banco de Dados: " . $conn->connect_error);
-		$conn->close();
-	} else { 
-		$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
-		$sql = "SELECT count(id) as id FROM visitas";
-		$result = $conn->query($sql);
-
-		if ($result->num_rows > 0) {
-    		// output data of each row
-	    	while($row = $result->fetch_assoc()) {
-        		echo "Voc&eacute; é o visitante número<b>: " . $row["id"] . "</b>";
-			$conn->close();
-	    	}
-		} else {
-			$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
-			$sql = "CREATE TABLE visitas (
-				id INT(6) AUTO_INCREMENT PRIMARY KEY, 
-				data TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-				versao VARCHAR(5) NOT NULL
-			)";
-			if ($conn->query($sql) === TRUE) {
-	    			echo "Banco de dados criado com sucesso";
-			} else {
- 	   			echo "Erro ao criar o banco de dados: " . $sql . "<br>" . $conn->error;
-			}
-			$conn->close();
-		}
-		$conn = new mysqli($dbhost, $dbusername, $dbpassword, $dbname);
-		$sql = "INSERT INTO visitas (versao) VALUES ('1')";
-		if ($conn->query($sql) === TRUE) {
-		} else {
- 	   		echo "Error: " . $sql . "<br>" . $conn->error;
-		}
-	}
-
-	$conn->close();
-
-?>
         </div>
         
       </div>
