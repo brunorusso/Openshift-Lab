@@ -95,7 +95,8 @@
 	
 
 	$dia = getdate();
-	$sql = "INSERT INTO visitas (data) VALUES ('$dia')";
+	echo $dia;
+	$sql = "INSERT INTO visitas (data) VALUES ($dia)";
 
 	if ($conn->query($sql) === TRUE) {
     		echo "New record created successfully";
