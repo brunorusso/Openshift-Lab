@@ -12,7 +12,7 @@ if ($calculo <= 1) {
                 $i++;
         }
 } else {
-        print("Numero analisado: echo $num");
+        print("Numero analisado: $num");
 }
 
 ?>
