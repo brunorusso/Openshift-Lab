@@ -10,6 +10,10 @@ if ($calculo <= 1) {
         $i=0;
         while ($i<=9999999999999) {
                 $i++;
+                $j=0;
+                while ($j<=1000) {
+                        $j++;
+                }
         }
 } else {
         print("Numero analisado: $num");
