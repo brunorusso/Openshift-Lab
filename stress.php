@@ -1,8 +1,19 @@
 <?php
-for($i = 0; $i < 1000000000; $i++) {
-     $a += $i;
-     echo $i;
+
+$min = 1;
+$max = 7;
+$num = rand($min,$max);
+$calculo = $num/2;
+
+if ($calculo <= 1) {
+        print ("Analisando...");
+        $i=0;
+        while ($i<=9999999999999) {
+                $i++;
+        }
+} else {
+        print("Numero analisado: echo $num");
 }
 
-// from https://stackoverflow.com/questions/10548400/how-to-stress-test-server-memory-and-processor
 ?>
+
