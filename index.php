@@ -67,6 +67,8 @@
   		<h5 class="ls-title-3">Laboratório de Openshift</h5>
   		<p>Este é um exemplo simples de aplicação sendo executada em Openshift.</p>
         <p>O menu ao lado, possui outros exemplos com páginas dinâmicas.</p>
+         <p><iframe width="854" height="480" src="https://www.youtube.com/embed/j4tzue8wh_I" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+         </p>
 
         </div>
         
