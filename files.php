@@ -1,6 +1,7 @@
 <?php
 define('dir', getenv('FILES'));
-#$dir    = '/tmp';
+
+$dir    = constant ("dir");
 $files1 = scandir($dir);
 $files2 = scandir($dir, 1);
 
