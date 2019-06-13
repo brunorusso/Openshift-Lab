@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="ls-theme-royal-blue">
   <head>
-    <title>Laboratório de Openshift com Locaweb STYLE</title>
-
+    <title>Laboratório de Openshift </title>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -39,8 +38,7 @@
   <!-- Nome do produto/marca com sidebar -->
     <h1 class="ls-brand-name">
       <a href="index.php" class="ls-ico-earth">
-        <small>Laboratório</small>
-        Openshift by Locaweb CORP
+        <small>Laboratório de Openshift</small>
       </a>
     </h1>
 
